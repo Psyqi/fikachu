@@ -275,3 +275,36 @@ body {
     box-shadow: 0 0 20px rgba(255, 107, 129, 0.9);
   }
 }
+
+/* Media Queries untuk Responsivitas */
+@media (max-width: 600px) {
+  body {
+    font-size: 14px; /* Ukuran font lebih kecil untuk perangkat mobile */
+  }
+
+  #title-container {
+    padding: 8px 20px; /* Padding lebih kecil */
+    font-size: 22px; /* Ukuran font judul lebih kecil */
+  }
+
+  #game-container {
+    padding: 10px; /* Padding lebih kecil */
+  }
+
+  button {
+    padding: 10px 20px; /* Padding lebih kecil untuk tombol */
+    font-size: 14px; /* Ukuran font tombol lebih kecil */
+  }
+
+  #story-text {
+    font-size: 16px; /* Ukuran font teks cerita lebih kecil */
+  }
+
+  #end-modal .model-content {
+    padding: 15px; /* Padding lebih kecil untuk modal */
+  }
+
+  #end-modal .model-content button {
+    padding: 8px 16px; /* Padding lebih kecil untuk tombol di modal */
+  }
+}
