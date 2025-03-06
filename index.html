@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Pokemon Collection</title>
+    <link rel="stylesheet" href="adventure.css" />
+  </head>
+  <body>
+    <div id="title-container">
+      <h1>My Pokemon Collection</h1>
+    </div>
+
+    <div id="start-modal" class="modal">
+      <div class="modal-content">
+        <p>Hey there, I wanna show you something.<span></span></p>
+        <img src="pokeball.png" />
+        <p>I GOT POKEMON SPECIAL WITH MY POKEBALL, AND I LIKE TO SHARE IT WITH U 💗</p>
+        <button id="startButton">Start</button>
+      </div>
+    </div>
+
+    <div id="particle-container"></div>
+
+    <audio id="backgroundMusic" autoplay loop>
+      <source src="romantic.mp3" type="audio/mpeg" />
+    </audio>
+
+    <div id="game-container">
+      <div class="content" id="content" style="display: none">
+        <img id="image" src="pokeball.png" alt="Gambar" />
+        <p id="story-text">Ini adalah teks untuk gambar pertama.</p>
+      </div>
+      <button id="nextButton">Next</button>
+    </div>
+
+    <div id="end-modal" class="model">
+      <div class="model-content">
+        <p>That's all of my pokemon collection.<span></span></p>
+        <img src="image.png" />
+        <p>Thanks for all your hardwork, your dedication, and everything u did. Pokemon ku benar-benar melakukan hal yang hebat. <br />Semangat melakukan apa yang harus di lakukan pokemon 💗</p>
+        <button id="finishButton">Finish</button>
+      </div>
+    </div>
+
+    <!--  
+    <script src="love.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>-->
+    <script src="test.js"></script>
+    <script src="end.js"></script>
+    <script src="music.js"></script>
+  </body>
+</html>

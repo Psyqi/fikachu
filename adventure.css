@@ -1,0 +1,277 @@
+body {
+  font-family: 'Garamond', serif; /* Romantic serif font */
+  background-color: #fce4ec; /* Soft pink background */
+  text-align: center;
+  overflow: hidden; /* Ensures no scrolling beyond the viewport */
+  display: flex;
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+  height: 100vh; /* Full viewport height */
+  margin: 0; /* Remove default margin */
+}
+
+#content {
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+#particle-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1; /* Ensures particles are behind other content */
+}
+
+.particle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #ffb3e6; /* Lighter pink color for cherry blossom petals */
+  border-radius: 50%;
+  pointer-events: none; /* Prevent particles from being interactive */
+  opacity: 1; /* Start with opacity 1 */
+  animation: particle-fall linear infinite; /* Animation definition */
+  transform: rotate(-45deg);
+  top: 0;
+  left: 0;
+  clip-path: polygon(50% 0%, 100% 30%, 80% 100%, 50% 80%, 20% 100%, 0% 30%);
+}
+
+/* Membuat bentuk love menggunakan pseudo-element */
+.particle::before,
+.particle::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #ffb3e6;
+  border-radius: 50%;
+}
+
+.particle::before {
+  top: -50px;
+  left: 0;
+}
+
+.particle::after {
+  left: 5px;
+  top: 0;
+}
+
+@keyframes particle-fall {
+  0% {
+    transform: translateY(-10px); /* Start above the viewport */
+  }
+  100% {
+    transform: translateY(calc(100vh + 10px)); /* End below the viewport */
+  }
+}
+
+#game-container {
+  max-width: 600px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white container */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease; /* Fade-in animation for container */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#story-text {
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: rgba(255, 240, 245, 0.8); /* Light pink background for story text */
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  font-size: 18px; /* Larger font size for a romantic feel */
+  line-height: 1.5; /* Increased line height for readability */
+  text-align: justify; /* Left-align text for a book-like feel */
+}
+
+#choices {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+button {
+  margin: 10px;
+  padding: 12px 24px; /* Increased padding for comfort */
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #ff80ab; /* Romantic pink button color */
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff5c8d; /* Darker pink button color on hover */
+}
+
+/* Styles for the modal */
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  z-index: 1000; /* Ensure it's above everything */
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.modal-content p {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.modal-content button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #ff80ab; /* Romantic pink button color */
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.modal-content button:hover {
+  background-color: #ff5c8d; /* Darker pink button color on hover */
+}
+
+.model {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  z-index: 1000; /* Ensure it's above everything */
+}
+
+.model-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.model-content p {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+#end-modal {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+#end-modal.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+.model-content button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #ff80ab; /* Romantic pink button color */
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.model-content button:hover {
+  background-color: #ff5c8d; /* Darker pink button color on hover */
+}
+
+/* Styles for fading light effect */
+body {
+  background: linear-gradient(to bottom, #d9ecf2 0%, #f1e5f5 100%); /* Soft gradient background */
+}
+
+#fading-light {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1; /* Behind other content */
+  opacity: 0; /* Start invisible */
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 10%, rgba(255, 255, 255, 0) 70%); /* Soft radial gradient for light */
+  animation: light-fade 10s infinite alternate; /* Animation definition */
+}
+
+@keyframes light-fade {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+#title-container {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(to right, #fad0c4, #e5babb);
+  border: 4px solid #e3c0c6;
+  padding: 12px 35px;
+  border-radius: 30px;
+  box-shadow: 0 0 15px #fce4ec;
+  font-family: 'Pacifico', cursive;
+  text-align: center;
+  color: white;
+  font-size: 26px;
+  font-weight: bold;
+  animation: glow 1.5s infinite alternate;
+}
+
+#title-container h1 {
+  margin: 0;
+  font-size: 30px;
+  text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.8);
+}
+
+/* Efek glowing */
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 10px rgba(71, 1, 12, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(255, 107, 129, 0.9);
+  }
+}
