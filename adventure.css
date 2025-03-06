@@ -307,4 +307,23 @@ body {
   #end-modal .model-content button {
     padding: 8px 16px; /* Padding lebih kecil untuk tombol di modal */
   }
+  /* Responsive Title */
+.responsive-title {
+    font-size: 2.5vw; /* Adjusts size based on viewport width */
+    text-align: center;
+}
+
+/* Responsive Image */
+.responsive-image {
+    width: 100%;
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 10px;
+}
+
+/* Description */
+.description {
+    font-size: 1.5vw; /* Adjusts size based on viewport width */
+    line-height: 1.6;
+}
+
 }
