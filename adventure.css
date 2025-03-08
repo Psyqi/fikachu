@@ -276,54 +276,72 @@ body {
   }
 }
 
-/* Media Queries untuk Responsivitas */
-@media (max-width: 600px) {
-  body {
-    font-size: 14px; /* Ukuran font lebih kecil untuk perangkat mobile */
-  }
+/* Existing styles remain unchanged */
 
-  #title-container {
-    padding: 8px 20px; /* Padding lebih kecil */
-    font-size: 22px; /* Ukuran font judul lebih kecil */
-  }
-
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
   #game-container {
-    padding: 10px; /* Padding lebih kecil */
+    max-width: 80%;
+    padding: 15px;
   }
-
-  button {
-    padding: 10px 20px; /* Padding lebih kecil untuk tombol */
-    font-size: 14px; /* Ukuran font tombol lebih kecil */
-  }
-
   #story-text {
-    font-size: 16px; /* Ukuran font teks cerita lebih kecil */
+    font-size: 16px;
   }
-
-  #end-modal .model-content {
-    padding: 15px; /* Padding lebih kecil untuk modal */
+  button {
+    padding: 10px 20px;
+    font-size: 14px;
   }
-
-  #end-modal .model-content button {
-    padding: 8px 16px; /* Padding lebih kecil untuk tombol di modal */
+  #title-container {
+    font-size: 22px;
   }
-  /* Responsive Title */
-.responsive-title {
-    font-size: 2.5vw; /* Adjusts size based on viewport width */
-    text-align: center;
 }
 
-/* Responsive Image */
-.responsive-image {
-    width: 100%;
-    height: auto; /* Maintains aspect ratio */
-    border-radius: 10px;
+@media screen and (max-width: 768px) {
+  body {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+  }
+  #game-container {
+    max-width: 90%;
+    padding: 10px;
+  }
+  #story-text {
+    font-size: 14px;
+    padding: 10px;
+  }
+  button {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+  #title-container {
+    font-size: px;
+    padding: 10px 25px;
+  }
+  body {
+    padding-top: 160px; /* Sesuaikan dengan tinggi judul */
+  }
 }
 
-/* Description */
-.description {
-    font-size: 1.5vw; /* Adjusts size based on viewport width */
-    line-height: 1.6;
-}
-
+@media screen and (max-width: 480px) {
+  #game-container {
+    max-width: 95%;
+    padding: 8px;
+  }
+  #story-text {
+    font-size: 12px;
+    padding: 8px;
+  }
+  button {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+  #title-container {
+    width: 80%; /* Kurangi lebar */
+    font-size: 1.2rem; /* Perkecil ukuran font */
+    padding: 10px; /* Kurangi padding */
+  }
+  body {
+    padding-top: 160px; /* Sesuaikan dengan tinggi judul */
+  }
 }
