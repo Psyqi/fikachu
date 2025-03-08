@@ -72,5 +72,5 @@ nextButton.addEventListener('click', () => {
 
 // Event listener untuk tombol finish (menutup website)
 finishButton.addEventListener('click', () => {
-  window.close(); // Menutup website
+  window.location.href = 'moon.html'; // Ganti dengan URL halaman tujuan
 });
